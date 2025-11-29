@@ -1,1 +1,1 @@
-# rishJava
+# rishJava24Maven
