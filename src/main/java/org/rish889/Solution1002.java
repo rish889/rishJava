@@ -19,7 +19,7 @@ package org.rish889;
 public class Solution1002 {
     static void main() {
         Solution1002 sol = new Solution1002();
-        System.out.println(sol.mostFrequentlyOccuringValidElement(new int[]{1, 3, 2, 1, 4, 1, 3, 3, 3}, 4);
+        System.out.println(sol.mostFrequentlyOccuringValidElement(new int[]{1, 3, 2, 1, 4, 1, 3, 3, 3}, 4));
     }
 
     public int mostFrequentlyOccuringValidElement(int[] nums, int threshold) {
