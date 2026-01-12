@@ -18,14 +18,13 @@ import java.util.stream.Stream;
  * Example 1: Input: arr[] = [5, 3, 9, 9, 10, 5, 3, 2] k = 1 Output: 5 Explanation: Valid elements (occur at most once and are non-negative): 10, 2. 10 is the largest, 2 is second largest → Answer = 2 → But here 5 and 3 occur twice, so are ignored.
  */
 
-public class Task1001 {
+public class Solution1001 {
     static void main() {
         Solution1001 sol = new Solution1001();
         System.out.println(sol.findSecondLargestDistinctElement(new int[]{5, 3, 9, 9, 10, 5, 3, 2}, 1));
     }
-}
 
-class Solution1001 {
+
     public int findSecondLargestDistinctElement(int[] nums, int k) {
         if (nums == null) {
             return -1;
