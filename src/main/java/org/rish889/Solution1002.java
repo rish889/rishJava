@@ -1,5 +1,11 @@
 package org.rish889;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 /*
     You are given an integer array arr[] and an integer threshold. Your task is to find the most frequently occurring valid element in the array using Java 8 Streams. A valid element is defined as:
 
@@ -23,7 +29,26 @@ public class Solution1002 {
     }
 
     public int mostFrequentlyOccuringValidElement(int[] nums, int threshold) {
-        return -1;
+        if (nums == null) {
+            return -1;
+        }
+        if (nums.length == 0) {
+            return -1;
+        }
+        if (threshold < 1) {
+            return -1;
+        }
+
+        Map<Integer, Long> freqMap = Arrays.stream(nums)
+                .filter(n -> n > 0)
+                .mapToObj(n -> n)
+                .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
+
+        return freqMap.entrySet().stream()
+                .filter(e -> e.getValue() <= threshold)
+                .max(Comparator.comparingLong(e -> e.getValue()))
+                .map(e -> e.getKey())
+                .orElse(-1);
     }
 }
 
