@@ -1,12 +1,12 @@
 package org.rish889;
 
-public class Task {
+public class Task1000 {
     public static void main(String args[]) {
 
     }
 }
 
-class Solution {
+class Solution1000 {
 
 }
 
