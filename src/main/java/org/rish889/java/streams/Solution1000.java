@@ -1,4 +1,4 @@
-package org.rish889;
+package org.rish889.java.streams;
 
 public class Solution1000 {
     public static void main(String[] args) {

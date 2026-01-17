@@ -1,4 +1,4 @@
-package org.rish889;
+package org.rish889.tdd;
 
 import org.junit.jupiter.api.Test;
 

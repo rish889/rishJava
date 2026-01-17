@@ -1,4 +1,4 @@
-package org.rish889;
+package org.rish889.java.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;

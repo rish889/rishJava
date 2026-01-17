@@ -1,4 +1,4 @@
-package org.rish889;
+package org.rish889.tdd;
 
 public class BowlingGame {
     private final int[] rolls = new int[31];

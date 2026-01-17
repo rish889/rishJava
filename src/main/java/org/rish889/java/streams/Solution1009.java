@@ -1,4 +1,4 @@
-package org.rish889;
+package org.rish889.java.streams;
 
 import java.util.Arrays;
 import java.util.List;
