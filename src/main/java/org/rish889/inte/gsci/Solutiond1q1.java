@@ -12,9 +12,10 @@ public class Solutiond1q1 {
     }
 
     public boolean emptyAfterRemoveKRepeatingElements(int[] arr, int k) {
-        if (arr == null) {
+        if (arr == null || arr.length == 0) {
             return false;
         }
+
         if (k <= 0) {
             return false;
         }
@@ -23,7 +24,7 @@ public class Solutiond1q1 {
                 .boxed()
                 .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
         for (Long count : numToCountMap.values()) {
-            if (count < k) {
+            if (count % k != 0) {
                 return false;
             }
         }

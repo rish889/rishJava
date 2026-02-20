@@ -18,17 +18,17 @@ public class Solutiond1q3 {
         int num2 = fraction2[0];
         int den2 = fraction2[1];
 
-        int numerator = num1 * den2 + num2 * den1;
-        int denominator = den1 * den2;
+        int num = num1 * den2 + num2 * den1;
+        int den = den1 * den2;
 
-        int gcd = gcd(numerator, denominator);
+        int gcd = gcd(num, den);
 
-        numerator = numerator / gcd;
-        denominator = denominator / gcd;
+        num = num / gcd;
+        den = den / gcd;
 
-        System.out.println(numerator + "/" + denominator);
+        System.out.println(num + "/" + den);
 
-        return new int[]{numerator, denominator};
+        return new int[]{num, den};
     }
 
     private int gcd(int a, int b) {

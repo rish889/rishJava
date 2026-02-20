@@ -10,6 +10,7 @@ public class Solutiond1q2 {
                 new StudentGrade("Bobby", 87),
                 new StudentGrade("Charles", 100),
                 new StudentGrade("Eric", 64),
+                new StudentGrade("Charles", 22),
                 new StudentGrade("Charles", 22)
         )));
 
@@ -36,4 +37,9 @@ public class Solutiond1q2 {
     record StudentGrade(String name, int grade) {
     }
 }
+
+/**
+ * (100+22)/2=61   (61+22)/2=41.5
+ * (100+22+22)/3=
+ */
 
