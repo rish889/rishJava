@@ -19,8 +19,8 @@ public class Solutiond1q5 {
         StringBuilder result = new StringBuilder();
 
         result.append(numerator / denominator);
-
         long remainder = numerator % denominator;
+
         if (remainder == 0) {
             return result.toString();
         }
