@@ -6,6 +6,7 @@ import java.util.List;
 public class Solutiond1q4 {
     public static void main(String[] args) {
         Solutiond1q4 sol = new Solutiond1q4();
+        System.out.println(sol.getPrimeFactors(2));
         System.out.println(sol.getPrimeFactors(6));
         System.out.println(sol.getPrimeFactors(5));
         System.out.println(sol.getPrimeFactors(30));

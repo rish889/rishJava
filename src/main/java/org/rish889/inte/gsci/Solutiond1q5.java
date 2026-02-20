@@ -13,13 +13,13 @@ public class Solutiond1q5 {
         System.out.println(sol.fractionToDecimal(4, 7));
     }
 
-    public String fractionToDecimal(int numerator, int denominator) {
-        if (numerator == 0) return "0";
+    public String fractionToDecimal(int num, int den) {
+        if (num == 0) return "0";
 
         StringBuilder result = new StringBuilder();
 
-        result.append(numerator / denominator);
-        long remainder = numerator % denominator;
+        result.append(num / den);
+        long remainder = num % den;
 
         if (remainder == 0) {
             return result.toString();
@@ -38,8 +38,8 @@ public class Solutiond1q5 {
             remainderToIndexMap.put(remainder, result.length());
 
             remainder *= 10;
-            result.append(remainder / denominator);
-            remainder %= denominator;
+            result.append(remainder / den);
+            remainder %= den;
         }
 
         return result.toString();
