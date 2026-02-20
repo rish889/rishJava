@@ -19,27 +19,27 @@ public class Solutiond1q5 {
         StringBuilder result = new StringBuilder();
 
         result.append(num / den);
-        long remainder = num % den;
+        long rem = num % den;
 
-        if (remainder == 0) {
+        if (rem == 0) {
             return result.toString();
         }
 
         result.append(".");
         Map<Long, Integer> remainderToIndexMap = new HashMap<>();
 
-        while (remainder != 0) {
-            if (remainderToIndexMap.containsKey(remainder)) {
-                int index = remainderToIndexMap.get(remainder);
+        while (rem != 0) {
+            if (remainderToIndexMap.containsKey(rem)) {
+                int index = remainderToIndexMap.get(rem);
                 result.insert(index, "(");
                 result.append(")");
                 break;
             }
-            remainderToIndexMap.put(remainder, result.length());
+            remainderToIndexMap.put(rem, result.length());
 
-            remainder *= 10;
-            result.append(remainder / den);
-            remainder %= den;
+            rem *= 10;
+            result.append(rem / den);
+            rem %= den;
         }
 
         return result.toString();
