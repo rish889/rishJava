@@ -1,4 +1,4 @@
-package org.rish889.inte;
+package org.rish889.inte.old;
 
 public class Solution1000 {
     int startIndex = 0;

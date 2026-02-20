@@ -1,11 +1,11 @@
-package org.rish889.inte;
+package org.rish889.inte.old;
 
-public class Solution1001 {
+public class Solution1002 {
     int startIndex = 0;
     int endIndex = 0;
 
     public static void main(String[] args) {
-        Solution1001 sol = new Solution1001();
+        Solution1002 sol = new Solution1002();
         System.out.println(sol.findFrequencyOfTargetNumber(new int[]{1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3}, 2));
     }
 
