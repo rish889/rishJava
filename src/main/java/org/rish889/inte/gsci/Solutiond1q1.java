@@ -12,6 +12,13 @@ public class Solutiond1q1 {
     }
 
     public boolean emptyAfterRemoveKRepeatingElements(int[] arr, int k) {
+        if (arr == null) {
+            return false;
+        }
+        if (k <= 0) {
+            return false;
+        }
+
         Map<Integer, Long> numToCountMap = Arrays.stream(arr)
                 .boxed()
                 .collect(Collectors.groupingBy(n -> n, Collectors.counting()));
