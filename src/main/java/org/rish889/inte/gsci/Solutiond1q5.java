@@ -26,16 +26,16 @@ public class Solutiond1q5 {
         }
 
         result.append(".");
-        Map<Long, Integer> remainderToIndexMap = new HashMap<>();
+        Map<Long, Integer> remToIndexMap = new HashMap<>();
 
         while (rem != 0) {
-            if (remainderToIndexMap.containsKey(rem)) {
-                int index = remainderToIndexMap.get(rem);
+            if (remToIndexMap.containsKey(rem)) {
+                int index = remToIndexMap.get(rem);
                 result.insert(index, "(");
                 result.append(")");
                 break;
             }
-            remainderToIndexMap.put(rem, result.length());
+            remToIndexMap.put(rem, result.length());
 
             rem *= 10;
             result.append(rem / den);
