@@ -1,6 +1,10 @@
 package org.rish889.inte.gsci;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
     Given a list of words, group them by anagrams.
@@ -9,7 +13,7 @@ import java.util.*;
         Input: ["pan", "nap", "rome", "more"], Output: [["pan", "nap"], ["rome", "more"]]
  */
 public class Solutiond2q3 {
-    public static Collection<List<String>> groupAnagrams(String[] strs) {
+    public static List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
 
         for (String word : strs) {
@@ -20,12 +24,14 @@ public class Solutiond2q3 {
             map.computeIfAbsent(key, _ -> new ArrayList<>()).add(word);
         }
 
-        return map.values();
+        return new ArrayList<>(map.values());
     }
 
-    public static void main(String[] args) {
-        System.out.println(groupAnagrams(new String[]{"cat", "dog", "god"}));
-        System.out.println(groupAnagrams(new String[]{"pan", "nap", "rome", "more"}));
+
+    @Test
+    void test1() {
+        assertEquals(List.of(List.of("cat"), List.of("dog", "god")), groupAnagrams(new String[]{"cat", "dog", "god"}));
+        assertEquals(List.of(List.of("pan", "nap"), List.of("rome", "more")), groupAnagrams(new String[]{"pan", "nap", "rome", "more"}));
     }
 }
 
