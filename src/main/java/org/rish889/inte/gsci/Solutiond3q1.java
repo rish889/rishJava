@@ -2,6 +2,8 @@ package org.rish889.inte.gsci;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
@@ -12,6 +14,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Solutiond3q1 {
     public int findMin(int[] nums) {
+        if (Objects.isNull(nums) || nums.length == 0) {
+            return Integer.MIN_VALUE;
+        }
+
         int left = 0;
         int right = nums.length - 1;
 
