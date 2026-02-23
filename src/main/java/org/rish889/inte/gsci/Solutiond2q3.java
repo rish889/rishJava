@@ -14,6 +14,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Solutiond2q3 {
     public static List<List<String>> groupAnagrams(String[] strs) {
+        if (Objects.isNull(strs) || strs.length == 0) {
+            return new ArrayList<>();
+        }
+
         Map<String, List<String>> map = new HashMap<>();
 
         for (String word : strs) {
