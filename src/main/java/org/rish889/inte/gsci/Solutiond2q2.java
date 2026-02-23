@@ -1,5 +1,9 @@
 package org.rish889.inte.gsci;
 
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /*
     Finds the first character that does not repeat anywhere in the input string
 
@@ -8,9 +12,11 @@ package org.rish889.inte.gsci;
     str = "racecars", output = "e"
  */
 public class Solutiond2q2 {
-    public static void main(String[] args) {
-        System.out.println(firstNonRepeating("apple"));
-        System.out.println(firstNonRepeating("racecars"));
+
+    @Test
+    void test1() {
+        assertEquals('a', firstNonRepeating("apple"));
+        assertEquals('e', firstNonRepeating("racecars"));
     }
 
     public static char firstNonRepeating(String str) {
@@ -19,7 +25,7 @@ public class Solutiond2q2 {
         for (char ch : str.toCharArray()) {
             freq[ch]++;
         }
-        
+
         for (char ch : str.toCharArray()) {
             if (freq[ch] == 1) {
                 return ch;
