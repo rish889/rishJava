@@ -2,6 +2,9 @@ package org.rish889.inte.gsci;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
@@ -20,6 +23,10 @@ public class Solutiond2q2 {
     }
 
     public static char firstNonRepeating(String str) {
+        if (Objects.isNull(str) || str.isBlank()) {
+            return '1';
+        }
+
         int[] freq = new int[256];
 
         for (char ch : str.toCharArray()) {
