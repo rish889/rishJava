@@ -34,19 +34,14 @@ public class Solutiond2q1 {
         Set<String> result = new HashSet<>();
 
         for (String word : dictionary) {
-
             int len = word.length();
-
             if (len > letters.length()) continue;
             if (len < maxLength) continue;
-
             if (canForm(word, lettersCount)) {
-
                 if (len > maxLength) {
                     maxLength = len;
                     result.clear();
                 }
-
                 result.add(word);
             }
         }
