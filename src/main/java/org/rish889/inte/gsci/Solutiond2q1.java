@@ -24,15 +24,15 @@ public class Solutiond2q1 {
 
     @Test
     void test1() {
-        assertEquals(Set.of("toe"), findLongestWords("oetdg", Set.of("to","toe","toes")));
+        assertEquals(Set.of("toe"), findWords("oetdg", Set.of("to","toe","toes")));
     }
 
     @Test
     void test2() {
-        assertEquals(Set.of("doe", "toe", "dog", "god"), findLongestWords("oetdg", Set.of("to", "toe", "toes", "doe", "dog", "god", "dogs", "book", "banana")));
+        assertEquals(Set.of("doe", "toe", "dog", "god"), findWords("oetdg", Set.of("to", "toe", "toes", "doe", "dog", "god", "dogs", "book", "banana")));
     }
 
-    public static Set<String> findLongestWords(String letters, Set<String> dictionary) {
+    public static Set<String> findWords(String letters, Set<String> dictionary) {
 
         int[] lettersCount = buildFrequency(letters);
         int maxLength = 0;
