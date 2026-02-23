@@ -20,8 +20,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
     letters = "oetdg", dictionary = {"to", "toe", "toes", "doe", "dog", "god", "dogs", "book", "banana"}, Output: {"doe", "toe", "dog", "god"}
  */
-
-
 public class Solutiond2q1 {
 
     @Test

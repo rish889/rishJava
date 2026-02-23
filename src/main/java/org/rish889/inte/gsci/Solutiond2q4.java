@@ -2,8 +2,6 @@ package org.rish889.inte.gsci;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
@@ -30,7 +28,7 @@ public class Solutiond2q4 {
                 currentLength++;
             } else {
                 if (currentLength > maxLength) {
-                    maxLength = currentLength;
+                    maxLength = Math.max(currentLength, maxLength);
                     maxStart = currentStart;
                 }
                 currentStart = i;
@@ -38,19 +36,26 @@ public class Solutiond2q4 {
             }
         }
 
-
         if (currentLength > maxLength) {
-            maxLength = currentLength;
+            maxLength = Math.max(currentLength, maxLength);
             maxStart = currentStart;
         }
 
-        return new int[]{maxStart, maxLength};
+        return new int[]{maxStart, maxStart + maxLength - 1};
     }
 
     @Test
     void test1() {
-        assertEquals(List.of(List.of("cat"), List.of("dog", "god")), groupAnagrams(new String[]{"cat", "dog", "god"}));
-        assertEquals(List.of(List.of("pan", "nap"), List.of("rome", "more")), groupAnagrams(new String[]{"pan", "nap", "rome", "more"}));
+        int result[] = longestUniformSubstring("abbbccda");
+        assertEquals(1, result[0]);
+        assertEquals(3, result[1]);
+    }
+
+    @Test
+    void test2() {
+        int result[] = longestUniformSubstring("abcxxyyz");
+        assertEquals(3, result[0]);
+        assertEquals(4, result[1]);
     }
 }
 
