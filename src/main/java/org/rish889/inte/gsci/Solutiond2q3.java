@@ -1,7 +1,6 @@
 package org.rish889.inte.gsci;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /*
     Given a list of words, group them by anagrams.
