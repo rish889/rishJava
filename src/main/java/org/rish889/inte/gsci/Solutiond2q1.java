@@ -1,5 +1,12 @@
 package org.rish889.inte.gsci;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /*
     Given a string of letters and a dictionary,
     the function should find the longest word or words in the dictionary that can be made from the letters.
@@ -14,17 +21,17 @@ package org.rish889.inte.gsci;
     letters = "oetdg", dictionary = {"to", "toe", "toes", "doe", "dog", "god", "dogs", "book", "banana"}, Output: {"doe", "toe", "dog", "god"}
  */
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Solutiond2q1 {
-    public static void main(String[] args) {
-        Set<String> dictionary = Set.of(
-                "to", "toe", "toes", "doe", "dog", "god",
-                "dogs", "book", "banana"
-        );
 
-        System.out.println(findLongestWords("oetdg", dictionary));
+    @Test
+    void test1() {
+        assertEquals(Set.of("toe"), findLongestWords("oetdg", Set.of("to","toe","toes")));
+    }
+
+    @Test
+    void test2() {
+        assertEquals(Set.of("doe", "toe", "dog", "god"), findLongestWords("oetdg", Set.of("to", "toe", "toes", "doe", "dog", "god", "dogs", "book", "banana")));
     }
 
     public static Set<String> findLongestWords(String letters, Set<String> dictionary) {
