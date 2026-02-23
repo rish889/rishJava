@@ -3,6 +3,7 @@ package org.rish889.inte.gsci;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -24,7 +25,7 @@ public class Solutiond2q1 {
 
     @Test
     void test1() {
-        assertEquals(Set.of("toe"), findLongestWords("oetdg", Set.of("to","toe","toes")));
+        assertEquals(Set.of("toe"), findLongestWords("oetdg", Set.of("to", "toe", "toes")));
     }
 
     @Test
@@ -33,6 +34,14 @@ public class Solutiond2q1 {
     }
 
     public static Set<String> findLongestWords(String letters, Set<String> dictionary) {
+
+        if (Objects.isNull(letters) || letters.isBlank()) {
+            return new HashSet<>();
+        }
+
+        if (Objects.isNull(dictionary) || dictionary.isEmpty()) {
+            return new HashSet<>();
+        }
 
         int[] lettersCount = buildFrequency(letters);
         int maxLength = 0;
