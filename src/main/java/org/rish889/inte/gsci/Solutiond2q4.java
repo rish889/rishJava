@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Solutiond2q4 {
     public static int[] longestUniformSubstring(String input) {
-        if (input == null || input.length() == 0) {
+        if (input == null || input.isBlank()) {
             return new int[]{-1, 0};
         }
 
@@ -28,7 +28,7 @@ public class Solutiond2q4 {
                 currentLength++;
             } else {
                 if (currentLength > maxLength) {
-                    maxLength = Math.max(currentLength, maxLength);
+                    maxLength = currentLength;
                     maxStart = currentStart;
                 }
                 currentStart = i;
@@ -37,7 +37,7 @@ public class Solutiond2q4 {
         }
 
         if (currentLength > maxLength) {
-            maxLength = Math.max(currentLength, maxLength);
+            maxLength = currentLength;
             maxStart = currentStart;
         }
 
@@ -46,14 +46,14 @@ public class Solutiond2q4 {
 
     @Test
     void test1() {
-        int result[] = longestUniformSubstring("abbbccda");
+        int[] result = longestUniformSubstring("abbbccda");
         assertEquals(1, result[0]);
         assertEquals(3, result[1]);
     }
 
     @Test
     void test2() {
-        int result[] = longestUniformSubstring("abcxxyyz");
+        int[] result = longestUniformSubstring("abcxxyyz");
         assertEquals(3, result[0]);
         assertEquals(4, result[1]);
     }
