@@ -2,6 +2,8 @@ package org.rish889.inte.gsci;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /*
@@ -13,6 +15,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Solutiond3q3 {
     public static double findMedian(int[] arr1, int[] arr2) {
+        if (Objects.isNull(arr1) || Objects.isNull(arr2) || (arr1.length + arr2.length) == 0) {
+            return Integer.MIN_VALUE;
+        }
+
         if (arr1.length > arr2.length) {
             return findMedian(arr2, arr1);
         }
