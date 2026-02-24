@@ -87,3 +87,5 @@ public class Solutiond2q1 {
     }
 }
 
+//time =>  dicLen*wordLeng
+//space => dicLen

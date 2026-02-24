@@ -38,3 +38,6 @@ public class Solutiond3q2 {
     }
 }
 
+
+/// sql - secondHighest
+

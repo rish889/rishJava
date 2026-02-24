@@ -30,6 +30,7 @@ public class Solutiond2q3 {
 
         return new ArrayList<>(map.values());
     }
+    // time => aL * (wL * log(wL))
 
 
     @Test
